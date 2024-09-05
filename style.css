@@ -15,6 +15,12 @@
   
   }
 
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: poppins;
     margin: 0;
@@ -129,8 +135,7 @@ header .carrito img {
 
 
 .productos {
-    display: flex;
-    flex-direction: row;
+    display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columnas */
     gap: 20px;
     padding: 50px;
