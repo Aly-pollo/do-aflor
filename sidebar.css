@@ -1,8 +1,8 @@
 .sidebar {
     position: fixed;
-    right: -300px;
+    right: -400px;
     top: 0;
-    width: 300px;
+    width: 400px;
     height: 100%;
     background-color: #f4f4f4;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
@@ -38,8 +38,58 @@
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 5px !important;
+
 }
 
 .sidebar button:hover {
     background-color: #555;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 999; 
+    display: none;
+}
+
+.overlay-active #overlay {
+    display: block;
+}
+
+.sidebar ul .remove-btn{
+    color: var(--color-primary);
+    border-radius: 5px !important;
+    transform: translateY(-5px);
+    transform: translateY(4px);
+
+}
+.sidebar ul{
+    margin-top: 1rem !important;  
+}
+
+.sidebar ul li{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: .5rem !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.sidebar ul li div{
+    display: flex;
+    flex-direction: column;
+}
+.sidebar ul li div .item-title{
+    font-weight: bold;
+}
+.sidebar ul li div .item-price{
+    color: #787878;
+}
+.sidebar ul li:last-child{
+    border-bottom: none !important;
+    padding-bottom: none !important;
 }

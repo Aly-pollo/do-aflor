@@ -75,20 +75,37 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartTotal = document.getElementById('carritoTotal');
     const cartDetailBtn = document.getElementById('verCarritoDetalle');
     const checkoutBtn = document.getElementById('finalizarCompra');
+    const overlay = document.getElementById('overlay');
+    const carritoCantidad = document.getElementById('carritoCantidad');
+
+
     
     let cart = [];
 
 
     openCartBtn.addEventListener('click', () => {
         cartSidebar.classList.add('active');
+        document.body.classList.add('overlay-active');
         console.log('carrito abierto');
     });
 
 
     closeCartBtn.addEventListener('click', () => {
         cartSidebar.classList.remove('active');
+        document.body.classList.remove('overlay-active');
         console.log('carrito cerrado');
     });
+
+    overlay.addEventListener('click', () => {
+        cartSidebar.classList.remove('active');
+        document.body.classList.remove('overlay-active');
+        console.log('carrito cerrado al hacer clic fuera');
+    });
+
+    function updateItemCount() {
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        carritoCantidad.textContent = totalItems;
+    }
 
     // añade productos al carrito 
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
@@ -105,6 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             renderCart();
+            updateItemCount();
         });
     });
 
@@ -114,17 +132,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
         cart.forEach((item, index) => {
             const li = document.createElement('li');
-            li.textContent = `${item.product} - $${item.price} x ${item.quantity}`;
+            li.classList.add('cart-item');
+            li.innerHTML = `
+                <div>
+                    <span class="item-title">${item.product}</span> 
+                    <span class="item-price">$${item.price} x ${item.quantity}</span>  
+                </div>
+                <i class="fas fa-trash-alt remove-btn" data-index="${index}"></i>
+            `;
             total += item.price * item.quantity;
+            cartItems.appendChild(li);
+        });
 
-            const removeBtn = document.createElement('button');
-            removeBtn.textContent = 'Eliminar';
-            removeBtn.addEventListener('click', () => {
+        // Agregar event listeners a los íconos de eliminar
+        const removeButtons = document.querySelectorAll('.remove-btn');
+        removeButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                const index = event.target.getAttribute('data-index');
                 removeFromCart(index);
             });
-
-            li.appendChild(removeBtn);
-            cartItems.appendChild(li);
         });
 
         cartTotal.textContent = total.toFixed(2);
@@ -133,6 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function removeFromCart(index) {
         cart.splice(index, 1);
         renderCart();
+        updateItemCount();
     }
 
     cartDetailBtn.addEventListener('click', () => {
