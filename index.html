@@ -30,7 +30,7 @@
             </ul>
         </nav>
         <div class="carrito">
-            <a href="#carrito">
+            <a id="abrirCarrito" id="openModalBtn" href="#carrito">
                 <img src="assets/shopping_bag_30dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="Carrito de Compras">
             </a>
         </div>
@@ -81,28 +81,28 @@
             <h3>Empanada tradicional</h3>
             <p>Carne picada, cebolla, aceituna y huevo.</p>
             <p class="precio">$2.500</p>
-            <button>Comprar</button>
+            <button class="add-to-cart" data-product="Empanada Tradicional" data-price="2.500">Comprar</button>
         </div>
         <div class="producto-card">
             <img src="assets/empanada 2.jpeg" alt="Producto 2">
             <h3>Empanada de queso</h3>
             <p>Queso de vacas felices del sur de Chile.</p>
             <p class="precio">$3.000</p>
-            <button>Comprar</button>
+            <button class="add-to-cart" data-product="Empanada de Queso" data-price="3000">Comprar</button>
         </div>
         <div class="producto-card">
             <img src="assets/empanada 3.jpeg" alt="Producto 3">
             <h3>Empanada internacional</h3>
             <p>Napolitana: Queso, albahaca, oregano, salame y salsa de tomate.</p>
             <p class="precio">$2.999</p>
-            <button>Comprar</button>
+            <button class="add-to-cart" data-product="Empanada Internacional" data-price="2.999">Comprar</button>
         </div>
         <div class="producto-card">
             <img src="assets/empanada 4.jpeg" alt="Producto 4">
             <h3>Empanada de mariscos</h3>
             <p>Queso curado,cebolla caramelizada, camarones del sur de Chile extraídos por pescadores artesanales.</p>
             <p class="precio">$3.500</p>
-            <button>Comprar</button>
+            <button class="add-to-cart" data-product="Empanada de mariscos" data-price="3.500">Comprar</button>
         </div>
     </section>
     <section class="productos">
@@ -112,7 +112,7 @@
             <p>Relleno de manjar o crema y cubiertos de azúcar flor o chocolate.</p>
             <h4>Caja contiene 12 unidades.</h4>
             <p class="precio">$7.500</p>
-            <button>Comprar</button>
+            <button class="add-to-cart" data-product="Alfajores de maicena" data-price="7.500">Comprar</button>
         </div>
         <div class="producto-card">
             <img src="assets/dulces 2.jpeg" alt="Producto 2">
@@ -120,7 +120,7 @@
             <p>Rellenos de Manjar, Crema pastelera o Crema especial de la casa.</p>
             <h4>Caja contiene 6 unidades.</h4>
             <p class="precio">$6.000</p>
-            <button>Comprar</button>
+            <button class="add-to-cart" data-product="berlines" data-price="6000">Comprar</button>
         </div>
         <div class="producto-card">
             <img src="assets/dulces 3.jpeg" alt="Producto 3">
@@ -128,7 +128,7 @@
             <p>Galletitas especiales para cocktel y ocasiones especiales.</p>
             <h4>Caja contiene 24 unidades.</h4>
             <p class="precio">$8.999</p>
-            <button>Comprar</button>
+            <button class="add-to-cart" data-product="Galleetitas deliciosas" data-price="8.999">Comprar</button>
         </div>
         <div class="producto-card">
             <img src="assets/dulces 4.jpeg" alt="Producto 4">
@@ -136,9 +136,21 @@
             <p>Dulces variados rellenos y blandos como malvaviscos de anís.</p>
             <h4>Caja contiene 12 unidades.</h4>
             <p class="precio">$4.500</p>
-            <button>Comprar</button>
+            <button class="add-to-cart" data-product="bombones y Malvas" data-price="4.500">Comprar</button>
         </div>
     </section>
+
+    <div id="carritoModal" class="modal">
+        <div class="modal-content">
+            <span id="cerrarCarrito" class="close">&times;</span>
+            <h2>Carrito de Compras</h2>
+            <ul id="carritoItems">
+                <!-- Los productos del carrito se mostrarán aquí -->
+            </ul>
+            <p>Total: $<span id="carritoTotal">0.00</span></p>
+            <button id="checkoutBtn">Pagar</button>
+        </div>
+    </div>
 
     <!--Formulario del concurso-->
     <section class="vendedor-concurso" id="concurso">
@@ -183,4 +195,5 @@
         <p>Dirección: Calle flores 123, Valparaiso, Chile</p>
     </footer>
 </body>
+<script src="script.js"></script>
 </html>
