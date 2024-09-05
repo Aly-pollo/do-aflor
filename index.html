@@ -1,186 +1,196 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nombre del Negocio Familiar</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
     <!-- Typo poppins-->
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <!-- Typo satisfy-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
-
-
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Typo satisfy-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet" />
+  </head>
+  <body>
     <header>
-        <div class="logo">
-            <img src="assets/logoflor2.png" alt="Logotipo de Doña Flor">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#concurso">Concurso</a></li>
-            </ul>
-        </nav>
-        <div class="carrito">
-            <a href="#carrito">
-                <img src="assets/shopping_bag_30dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="Carrito de Compras">
-            </a>
-        </div>
+      <div class="logo">
+        <img src="assets/logoflor2.png" alt="Logotipo de Doña Flor" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#concurso">Concurso</a></li>
+        </ul>
+      </nav>
+      <div class="carrito">
+        <a href="#carrito" onclick="openCarrito()">
+          <img src="assets/shopping_bag_30dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="Carrito de Compras" />
+        </a>
+      </div>
     </header>
 
-
     <section class="banner">
-        <img src="assets/Designer.jpeg" alt="Imagen Promocional">
+      <img src="assets/Designer.jpeg" alt="Imagen Promocional" />
     </section>
 
     <!--Metodos de compra-->
 
     <section class="seccion-servicios">
-        <div class="servicio">
-            <img src="assets/laptop_mac_30dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="Compra online">
-            <h3>Compra online</h3>
-            <p>Explora nuestra tienda en línea y selecciona los productos que más te gusten.</p>
-        </div>
-        <div class="servicio">
-            <img src="assets/payments_30dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="Paga tu pedido">
-            <h3>Paga tu pedido</h3>
-            <p>Utiliza nuestros métodos de pago seguros para completar tu compra.</p>
-        </div>
-        <div class="servicio">
-            <img src="assets/local_shipping_30dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="Recíbelo en casa">
-            <h3>Recíbelo en casa</h3>
-            <p>Te entregamos tus productos directamente en la puerta de tu hogar.</p>
-        </div>
-        <div class="servicio">
-            <img src="assets/store_30dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="Recógelo en nuestra tienda">
-            <h3>Recógelo en nuestra tienda</h3>
-            <p>Elige recoger tu pedido en nuestra tienda y ahorra en costos de envío.</p>
-        </div>
+      <div class="servicio">
+        <img src="assets/laptop_mac_30dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="Compra online" />
+        <h3>Compra online</h3>
+        <p>Explora nuestra tienda en línea y selecciona los productos que más te gusten.</p>
+      </div>
+      <div class="servicio">
+        <img src="assets/payments_30dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="Paga tu pedido" />
+        <h3>Paga tu pedido</h3>
+        <p>Utiliza nuestros métodos de pago seguros para completar tu compra.</p>
+      </div>
+      <div class="servicio">
+        <img src="assets/local_shipping_30dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="Recíbelo en casa" />
+        <h3>Recíbelo en casa</h3>
+        <p>Te entregamos tus productos directamente en la puerta de tu hogar.</p>
+      </div>
+      <div class="servicio">
+        <img src="assets/store_30dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="Recógelo en nuestra tienda" />
+        <h3>Recógelo en nuestra tienda</h3>
+        <p>Elige recoger tu pedido en nuestra tienda y ahorra en costos de envío.</p>
+      </div>
     </section>
-    
-<!--Texto-->
+
+    <!--Texto-->
 
     <section class="info">
-        <h2>Productos destacados</h2>
-        <p>Somos un negocio familiar, cada empanada y pastel es elaborado con recetas tradicionales, transmitidas de generación en generación. Descubre la magia de la cocina casera con Doña Flor.  Con ingredientes frescos y de la mejor calidad, prueba sabores auténticos que te transportarán a la cocina de tu abuela.</p>
+      <h2>Productos destacados</h2>
+      <p>
+        Somos un negocio familiar, cada empanada y pastel es elaborado con recetas tradicionales, transmitidas de generación en generación.
+        Descubre la magia de la cocina casera con Doña Flor. Con ingredientes frescos y de la mejor calidad, prueba sabores auténticos que
+        te transportarán a la cocina de tu abuela.
+      </p>
     </section>
 
     <!--Tarjetas de productos-->
 
     <section class="productos" id="productos">
-        <div class="producto-card">
-            <img src="assets/empanada 1.jpeg" alt="Producto 1">
-            <h3>Empanada tradicional</h3>
-            <p>Carne picada, cebolla, aceituna y huevo.</p>
-            <p class="precio">$2.500</p>
-            <button>Comprar</button>
-        </div>
-        <div class="producto-card">
-            <img src="assets/empanada 2.jpeg" alt="Producto 2">
-            <h3>Empanada de queso</h3>
-            <p>Queso de vacas felices del sur de Chile.</p>
-            <p class="precio">$3.000</p>
-            <button>Comprar</button>
-        </div>
-        <div class="producto-card">
-            <img src="assets/empanada 3.jpeg" alt="Producto 3">
-            <h3>Empanada internacional</h3>
-            <p>Napolitana: Queso, albahaca, oregano, salame y salsa de tomate.</p>
-            <p class="precio">$2.999</p>
-            <button>Comprar</button>
-        </div>
-        <div class="producto-card">
-            <img src="assets/empanada 4.jpeg" alt="Producto 4">
-            <h3>Empanada de mariscos</h3>
-            <p>Queso curado,cebolla caramelizada, camarones del sur de Chile extraídos por pescadores artesanales.</p>
-            <p class="precio">$3.500</p>
-            <button>Comprar</button>
-        </div>
+      <div class="producto-card">
+        <img src="assets/empanada 1.jpeg" alt="Producto 1" />
+        <h3>Empanada tradicional</h3>
+        <p>Carne picada, cebolla, aceituna y huevo.</p>
+        <p class="precio">$2.500</p>
+        <button onclick="agregarProducto('Empanada tradicional',2500)">Comprar</button>
+      </div>
+      <div class="producto-card">
+        <img src="assets/empanada 2.jpeg" alt="Producto 2" />
+        <h3>Empanada de queso</h3>
+        <p>Queso de vacas felices del sur de Chile.</p>
+        <p class="precio">$3.000</p>
+        <button onclick="agregarProducto('Empanada de queso',3000)">Comprar</button>
+      </div>
+      <div class="producto-card">
+        <img src="assets/empanada 3.jpeg" alt="Producto 3" />
+        <h3>Empanada internacional</h3>
+        <p>Napolitana: Queso, albahaca, oregano, salame y salsa de tomate.</p>
+        <p class="precio">$2.999</p>
+        <button onclick="agregarProducto('Empanada internacional', 2999)">Comprar</button>
+      </div>
+      <div class="producto-card">
+        <img src="assets/empanada 4.jpeg" alt="Producto 4" />
+        <h3>Empanada de mariscos</h3>
+        <p>Queso curado,cebolla caramelizada, camarones del sur de Chile extraídos por pescadores artesanales.</p>
+        <p class="precio">$3.500</p>
+        <button onclick="agregarProducto('Empanada de mariscos', 3500)">Comprar</button>
+      </div>
     </section>
     <section class="productos">
-        <div class="producto-card">
-            <img src="assets/dulces 1.jpeg" alt="Producto 1">
-            <h3>Alfajores de maicena</h3>
-            <p>Relleno de manjar o crema y cubiertos de azúcar flor o chocolate.</p>
-            <h4>Caja contiene 12 unidades.</h4>
-            <p class="precio">$7.500</p>
-            <button>Comprar</button>
-        </div>
-        <div class="producto-card">
-            <img src="assets/dulces 2.jpeg" alt="Producto 2">
-            <h3>Berlines</h3>
-            <p>Rellenos de Manjar, Crema pastelera o Crema especial de la casa.</p>
-            <h4>Caja contiene 6 unidades.</h4>
-            <p class="precio">$6.000</p>
-            <button>Comprar</button>
-        </div>
-        <div class="producto-card">
-            <img src="assets/dulces 3.jpeg" alt="Producto 3">
-            <h3>Galletitas delicias</h3>
-            <p>Galletitas especiales para cocktel y ocasiones especiales.</p>
-            <h4>Caja contiene 24 unidades.</h4>
-            <p class="precio">$8.999</p>
-            <button>Comprar</button>
-        </div>
-        <div class="producto-card">
-            <img src="assets/dulces 4.jpeg" alt="Producto 4">
-            <h3>Bombones y Malvas</h3>
-            <p>Dulces variados rellenos y blandos como malvaviscos de anís.</p>
-            <h4>Caja contiene 12 unidades.</h4>
-            <p class="precio">$4.500</p>
-            <button>Comprar</button>
-        </div>
+      <div class="producto-card">
+        <img src="assets/dulces 1.jpeg" alt="Producto 1" />
+        <h3>Alfajores de maicena</h3>
+        <p>Relleno de manjar o crema y cubiertos de azúcar flor o chocolate.</p>
+        <h4>Caja contiene 12 unidades.</h4>
+        <p class="precio">$7.500</p>
+        <button onclick="agregarProducto('Alfajores de maicena', 7500)">Comprar</button>
+      </div>
+      <div class="producto-card">
+        <img src="assets/dulces 2.jpeg" alt="Producto 2" />
+        <h3>Berlines</h3>
+        <p>Rellenos de Manjar, Crema pastelera o Crema especial de la casa.</p>
+        <h4>Caja contiene 6 unidades.</h4>
+        <p class="precio">$6.000</p>
+        <button onclick="agregarProducto('Berlines', 6000)">Comprar</button>
+      </div>
+      <div class="producto-card">
+        <img src="assets/dulces 3.jpeg" alt="Producto 3" />
+        <h3>Galletitas delicias</h3>
+        <p>Galletitas especiales para cocktel y ocasiones especiales.</p>
+        <h4>Caja contiene 24 unidades.</h4>
+        <p class="precio">$8.999</p>
+        <button onclick="agregarProducto('Galletitas delicias', 8999)">Comprar</button>
+      </div>
+      <div class="producto-card">
+        <img src="assets/dulces 4.jpeg" alt="Producto 4" />
+        <h3>Bombones y Malvas</h3>
+        <p>Dulces variados rellenos y blandos como malvaviscos de anís.</p>
+        <h4>Caja contiene 12 unidades.</h4>
+        <p class="precio">$4.500</p>
+        <button onclick="agregarProducto('Bombones y Malvas', 4500)">Comprar</button>
+      </div>
     </section>
 
     <!--Formulario del concurso-->
     <section class="vendedor-concurso" id="concurso">
-        <div class="vendedor">
-            <h3>Ella es Doña Flor</h3>
-            <img src="assets/flor1.jpeg" alt="Doña Flor">
-            <p>Saborea la tradición en cada bocado. Elaboradas con amor por nuestra experta cocinera. Sus empanadas y delicias son más que comida, son puro amor y un recuerdo exquisito. Con ingredientes frescos y recetas familiares, cada bocado te transportará a una experiencia única y deliciosa. ¡Participa ahora y disfruta de lo mejor de nuestra cocina casera!</p>
-        </div>
-        <div class="formulario-concurso">
-            <h2>Participa en nuestro Concurso de Fiestas Patrias</h2>
-            <form action="envio-de-formulario.php" method="post">
-                <label for="nombre">Nombre Completo:</label>
-                <input type="text" id="nombre" name="nombre" required>
-    
-                <label for="correo">Correo Electrónico:</label>
-                <input type="email" id="correo" name="correo" required>
-    
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" required>
-    
-                <label for="numero-compra">Número de Compra:</label>
-                <input type="text" id="numero-compra" name="numero-compra" required>
-    
-                <button type="submit">Participar</button>
-            </form>
-        </div>
+      <div class="vendedor">
+        <h3>Ella es Doña Flor</h3>
+        <img src="assets/flor1.jpeg" alt="Doña Flor" />
+        <p>
+          Saborea la tradición en cada bocado. Elaboradas con amor por nuestra experta cocinera. Sus empanadas y delicias son más que
+          comida, son puro amor y un recuerdo exquisito. Con ingredientes frescos y recetas familiares, cada bocado te transportará a una
+          experiencia única y deliciosa. ¡Participa ahora y disfruta de lo mejor de nuestra cocina casera!
+        </p>
+      </div>
+      <div class="formulario-concurso">
+        <h2>Participa en nuestro Concurso de Fiestas Patrias</h2>
+        <form action="envio-de-formulario.php" method="post">
+          <label for="nombre">Nombre Completo:</label>
+          <input type="text" id="nombre" name="nombre" required />
+
+          <label for="correo">Correo Electrónico:</label>
+          <input type="email" id="correo" name="correo" required />
+
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono" required />
+
+          <label for="numero-compra">Número de Compra:</label>
+          <input type="text" id="numero-compra" name="numero-compra" required />
+
+          <button type="submit">Participar</button>
+        </form>
+      </div>
     </section>
 
     <!--Saludo-->
     <section class="banner-fiestas-patrias">
-        <img src="assets/fiestas.jpeg" alt="Imagen de fiestas">
-        <div class="texto-banner">
-            <h2>¡Felices Fiestas Patrias!</h2>
-            <p>Desde nuestro emprendimiento familiar, agradecemos tu apoyo y te deseamos unas maravillosas Fiestas Patrias.</p>
-        </div>
+      <img src="assets/fiestas.jpeg" alt="Imagen de fiestas" />
+      <div class="texto-banner">
+        <h2>¡Felices Fiestas Patrias!</h2>
+        <p>Desde nuestro emprendimiento familiar, agradecemos tu apoyo y te deseamos unas maravillosas Fiestas Patrias.</p>
+      </div>
     </section>
-    
 
     <!--Contacto-->
     <footer>
-        <p>Contacto: donaflor@hotmail.com | Teléfono: +569 1234 5678</p>
-        <p>Dirección: Calle flores 123, Valparaiso, Chile</p>
+      <p>Contacto: donaflor@hotmail.com | Teléfono: +569 1234 5678</p>
+      <p>Dirección: Calle flores 123, Valparaiso, Chile</p>
     </footer>
-</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
